@@ -8,6 +8,7 @@ const functions = {
         'trash bags',
         'paper towels',
         'beer',
+        'tooth brush'
       ],
     createUser: ()=> {
         const user = {
@@ -17,8 +18,11 @@ const functions = {
         return user;
     },
 
-    fetchUser: ()=>{ 
-       return  axios.get("https://jsonplaceholder.typicode.com/users/1");
+    fetchUser : async ()=>{  
+       console.log("fetch1****");
+       let r =  await axios.get("https://jsonplaceholder.typicode.com/users/2");
+       console.log("fetch2****");
+       return r.data; 
     }
 }
 

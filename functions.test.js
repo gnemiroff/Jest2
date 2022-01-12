@@ -63,8 +63,10 @@ test('gleiches Objekt', () => {
 
 
   test('get a promize', () => {
-    functions.fetchUser().
-        then(data => { expect(data.name).toBe('Leanne Graham');});
+   functions.fetchUser().
+        then(data => { 
+             expect(data.name).toBe('Ervin Howell');
+            }); 
   });
 
 
