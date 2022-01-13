@@ -62,11 +62,14 @@ test('gleiches Objekt', () => {
   // Testing Asynchroneous calls
 
 
-  test('get a promize', () => {
-   functions.fetchUser().
+  test('get a promize', async () => {
+     await functions.fetchUser().
         then(data => { 
              expect(data.name).toBe('Ervin Howell');
             }); 
   });
+
+
+
 
 

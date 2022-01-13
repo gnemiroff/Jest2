@@ -19,11 +19,10 @@ const functions = {
     },
 
     fetchUser : async ()=>{  
-       console.log("fetch1****");
        let r =  await axios.get("https://jsonplaceholder.typicode.com/users/2");
-       console.log("fetch2****");
        return r.data; 
     }
+
 }
 
 module.exports=functions;
