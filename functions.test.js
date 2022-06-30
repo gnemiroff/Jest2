@@ -72,7 +72,7 @@ test('gleiches Objekt', () => {
   test('get (a promize) kunden id', async () => {
      await functions.fetchUser().
         then(data => { 
-             expect(data.id).toBe('3');
+             expect(data.id).toBe('1');
             }); 
   });
 
