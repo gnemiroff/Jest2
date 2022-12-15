@@ -13,13 +13,13 @@ const functions = {
     createUser: ()=> {
         const user = {
             firstName: "German",
-            secondName: "Nemirovskiii"
+            secondName: "Nemirovski"
         }
         return user;
     },
     
     fetchUser : async ()=>{  
-       let r =  await axios.get("https://jsonplaceholder.typicode.com/users/2");
+       let r =  await axios.get("https://jsonplaceholder.typicode.com/users/3");
        return r.data; 
     }   
 
