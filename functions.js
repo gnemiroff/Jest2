@@ -19,7 +19,10 @@ const functions = {
     },
     
     fetchUser : async ()=>{  
-       let r =  await axios.get("https://jsonplaceholder.typicode.com/users/3");
+
+       let r =  await axios.get("https://jsonplaceholder.typicode.com/users/2");
+       console.log("+++++++ : "+r);
+
        return r.data; 
     }   
 
