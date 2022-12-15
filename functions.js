@@ -4,7 +4,7 @@ const functions = {
     add: (num1, num2) => num1+num2,
     shoppingList: [
         'diapers',
-        'kleenex',
+        'kleenex',   
         'trash bags',
         'paper towels',
         'beer',
