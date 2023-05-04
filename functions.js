@@ -15,7 +15,8 @@ const functions = {
             firstName: "German",
             secondName: "Nemirovski"
         }
-        return user;
+        
+        return user;  
     },
     
     fetchUser : async ()=>{  
