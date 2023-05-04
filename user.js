@@ -27,6 +27,7 @@ class User {
          return (String(build.constructor) === String(User.Builder)); 
     }
     
+    
     static Builder() {
         class Builder {
             constructor(userId) {
