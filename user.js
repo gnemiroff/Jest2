@@ -1,55 +1,59 @@
-class User {
-    constructor(build) {
-        if (arguments.length === 1 && this.validateBuild(build)) {
 
-           let userId = build.userId;
-           let name = build.name;
-           let age = build.age;
-        
+
+//const UserBuilder = require('./userBuilder'); 
+//import { UserBuilder } from './userBuilder.js';
+
+class User {
+   constructor(build) {
+        if (arguments.length === 1 ) {
             Object.defineProperties(this, {
+      
                         '_userId': {
-                            value: userId,  
+                            value: build.userId,  
                             writable: false
                         },
                         '_name': {
-                            value: name, 
+                            value: build.name, 
                             writable: false
                         },
                         '_age': {
-                            value: age,
+                            value: build.age,
                             writable: false
                         }
             });   
         }
     }
     
-    validateBuild(build) {
-         return (String(build.constructor) === String(User.Builder)); 
-    }
     
-    
-    static Builder() {
-        class Builder {
-            constructor(userId) {
-                this.userId = userId;
-                return this;
-            }
-            
-            withName(name) {
-                this.name = name;
-                return this;
-            } 
-            
-            withAge(age) {
-                this.age = age;
-                return this;
-            }
-            build() {
-                return new User(this);
-            }
-        }
-        return Builder;
+
+    static Builder (userId) {
+        let ub = new UserBuilder (userId);
+        return ub;
+
     }
 }
 
-module.exports=User;
+class UserBuilder {
+    constructor(userId) {
+        this.userId = userId;
+    }
+    
+    withName (name) {
+        this.name = name;
+        return this;
+    } 
+    
+    withAge(age) {
+        this.age = age;
+        return this;
+    }
+    
+    build() {
+        let u =  new User (this); 
+        return u;
+    }
+}
+
+
+module.exports = UserBuilder; 
+module.exports = User;
