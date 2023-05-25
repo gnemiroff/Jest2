@@ -3,7 +3,7 @@ const axios = require ("axios");
 
 //  simple tests
 test('add 2 + 3 equals 5', ()=>{
-    expect(functions.add(2,3)).toBe(6);
+    expect(functions.add(2,3)).toBe(5);
 });
 
 // null tests
