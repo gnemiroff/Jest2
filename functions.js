@@ -13,6 +13,7 @@ const functions = {
         const user = {
             firstName: "German",
             secondName: "Nemirovski"
+            
         }
         return user;  
     },
