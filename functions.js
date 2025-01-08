@@ -12,7 +12,7 @@ const functions = {
       ],
     createUser: ()=> {
         const user = {
-            firstName: "German1",
+            firstName: "German",
             secondName: "Nemirovski"
             
         }
